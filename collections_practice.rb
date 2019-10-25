@@ -35,9 +35,13 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.each.with_index.collect do |element,index|  
-    if !index=="feet" 
-    element + 's'
+  new_array=[]
+  array.each.with_index do |element,index|  
+    if index!=1 
+       new_array<< element + 's'
+     else 
+       new_array<< element
     end
   end
+  new_array
 end
